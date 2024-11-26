@@ -30,9 +30,9 @@ jobs:
         # cache: gradle
 
     - name: Grant execute permission for gradle
-      run: chmod +x ./gradlew
+      run: chmod +x ./gradle
     - name: Build with Gradle
-      run: xvfb-run ./gradlew build
+      run: xvfb-run ./gradle build
 
 
     # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
@@ -41,7 +41,7 @@ jobs:
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
     - name: Build with Gradle Wrapper
-      run: ./gradlew build
+      run: ./gradle build
 
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
